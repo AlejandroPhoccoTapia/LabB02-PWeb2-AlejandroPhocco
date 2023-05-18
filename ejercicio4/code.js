@@ -8,6 +8,7 @@ function convertir() {
 
   if (match) {
     const codigoSesion = match[1];
-    resultado.innerHTML = 'El código es: ' + codigoSesion;
+    const codigoSinGuiones = codigoSesion.replace(/-/g, '');
+    resultado.innerHTML = 'El código es: ' + codigoSinGuiones;
   }
 }
