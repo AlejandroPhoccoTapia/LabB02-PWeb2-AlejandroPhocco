@@ -1,5 +1,6 @@
 let size = document.querySelector('.size');
 let table = document.querySelector('.table');
+let suma = document.querySelector('.suma');
 
 function generateTable() {
   let tableSize = size.value;
@@ -12,4 +13,15 @@ function generateTable() {
   tableHTML += '<button onclick="calculateSum()">Calcular Suma</button>';
 
   table.innerHTML = tableHTML;
+}
+
+function calculateSum() {
+  let values = document.querySelectorAll('.tableValue');
+  let sum = 0;
+
+  values.forEach((value) => {
+    sum += parseInt(value.value);
+  });
+
+  suma.innerHTML += ` ${sum}`;
 }
